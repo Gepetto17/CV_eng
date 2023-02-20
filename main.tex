@@ -1,0 +1,330 @@
+% Preamble
+% Compile with XeLateX
+
+\documentclass[11 pt,oneside,a4paper,titlepage]{article}
+\usepackage{preamble}
+\graphicspath{{PIC/}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\sidebar{sideBarColor!25}
+\simpleheader{titleBackColor}{Guillermo Ezequiel}{Perna}{University teaching assistant | PhD. student}{white}
+
+% Start Minipages
+\vspace*{3.49cm}% start 8 cm from the top of the page}
+    \adjustbox{valign=t}{\begin{minipage}{7.3cm} % large 7.4 cm from the top
+    \vspace*{1.2cm} % text starts 1cm under the top of the minipage
+            
+        % Picture
+        \begin{center}
+        \begin{tikzpicture}
+            \node[
+            circle,
+            minimum size=\cvPictureWidth,
+            path picture={
+            \node at (path picture bounding box.center){
+             \includegraphics[width=\cvPictureWidth]{Picture.jpg}
+             };
+             }]
+            {};
+        \end{tikzpicture}
+        \end{center}
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % Profile section
+        \ruleline{\textbf{About me}}
+        Curious and passionate doctoral student and assistant teacher in the Buenos Aires University. My research interests mainly focus on cosmology, quantum information, non-equilibrium quantum thermodynamics and quantum engines.
+        
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % Contact Section
+        \ruleline{\textbf{Contact}}
+        \begin{tikzpicture}[every node/.style={inner sep=0pt, outer sep=0pt}]
+        \matrix [
+        column 1/.style={anchor=center,contactIcon},
+        column 2/.style={anchor=west,align=left,contactIcon},
+        column sep=5pt,
+        row sep=5pt] (contact) {
+        \node{\faMale};
+         & \node{Born on 17/06/1996, Age 26.};\\
+        \node{\faEnvelope}; 
+         & \node{\href{mailto:gperna@df.uba.ar}{gperna@df.uba.ar}};\\
+         \node{\faEnvelopeO}; 
+         & \node{\href{mailto:guillermoezequielperna@gmail.com}{guillermoezequielperna@gmail.com}};\\
+        \node{\faPhone}; 
+         & \node{+54 911 5498 2374};\\ 
+        \node{\faMapMarker}; 
+        & \node{Av. Carabobo 237 \\ C1406DGC (Bs.As.), Argentina.};\\
+        \node{\faLinkedinSquare}; 
+        & \node{\href{https://www.linkedin.com/in/guillermo-ezequiel-perna-364306267/}{Guillermo Ezequiel Perna}};\\
+        \node{\faGithub}; 
+        & \node{\href{https://github.com/Gepetto17}{Gepetto17}};\\
+        \node{\faLock}; 
+        & \node{HTB: Gepetto17};\\
+        \node{\aiResearchGateSquare}; 
+        & \node{\href{https://www.researchgate.net/profile/Guillermo-Perna}{Research Gate: Guillermo Perna}};\\
+        \node{\aiOrcid}; 
+        & \node{\href{https://orcid.org/0000-0002-8449-2326}{ORCID: 0000-0002-8449-2326}};\\
+        \node{\faCar};
+        & \node{Driving License B};\\
+         };
+        \end{tikzpicture} 
+        
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \ruleline{\textbf{Languages}}
+        \begin{tikzpicture}[every node/.style={inner sep=0pt, outer sep=0pt}]
+        \matrix [
+        column 1/.style={anchor=center,contactIcon},
+        column 2/.style={anchor=west,align=left,contactIcon},
+        column sep=5pt,
+        row sep=5pt] (contact) {
+        \node{\flag{Spain.png}};
+        & \node{Spanish - Native Language};\\
+        \node{\flag{England.png}};
+        & \node{English - Advanced Knowledge};\\
+        \node{\flag{German_flag_low.png}};
+        & \node{German - Advanced Knowledge};\\
+        \node{\flag{France.png}};
+        & \node{French - Basic Knowledge};\\
+        };
+        \end{tikzpicture} 
+        
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % QR Code
+        %\begin{center}
+        %    \includegraphics[width=3.5cm]{QR_Info.png}
+        %\end{center}
+        
+    \end{minipage}} %
+    \hfill 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% MAIN SECTION %%%%%%%%%%%%%%%%%%%%
+    \adjustbox{valign=t}{\begin{minipage}{11.3cm}
+        \vspace*{1cm}
+        \section*{{\faGraduationCap} EDUCATION}
+
+        \MySection{2021-Ongoing}{Books.png}{PhD.}{Universidad de Buenos Aires}{Buenos Aires, Argentina}{Scientific researcher}{My research interests include topics in Quantum Information and Quantum Computation, Quantum Engines, Quantum Measurement Engines, Cosmologie and Relativistic Fluid Dynamics. \\\textbf{Degree: 35/100}}
+            
+        \vspace*{0.22cm}
+            
+        \MySection{2015-2021}{Books.png}{B.Sc.+M.Sc. degree}{Universidad de Buenos Aires}{Buenos Aires, Argentina}{Student}{I graduated with honors in Physics writing a thesis on relativistic viscous fluids and their applications to cosmology. The main results were then published as scientific article. \\\textbf{Degree: 100/100}}
+
+        \vspace*{0.22cm}
+            
+        \MySection{2009-2014}{Books.png}{Technical school}{Escuela Técnica N35 Ing. E. Latzina}{Buenos Aires, Argentina}{Student}{My high school education was at a technical college, where I majored in automotive mechanics and it provided me with a solid technical foundation. I have been the best student of my classyear, being awarded with the \textit{Mejores Promedios} scholarship for my university education, consisting on a monetary price, a computer, a bike and a 4 weeks visit to the California University. \\\textbf{Degree: 100/100}}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % Work Experience
+        \section*{{\faSuitcase} WORK EXPERIENCE}
+            
+        \MySectionNoPic{2018-Today}{Assistant teacher}{Buenos Aires, Argentina}{Departamento de Física, Universidad de Buenos Aires}{I began as undergraduate assistant teacher in 2018 and continued teaching till the present. In 2022 I was promoted to graduate assistant teacher. I have taught virtually every theoretical course in the physics major.}  
+            
+        \vspace*{0.22cm}
+            
+        \MySectionNoPic{2015}{Technical internship}{Buenos Aires, Argentina}{Robert Bosch S.A. Argentina}{I spent 3 months as technical intern learning about mechatronics and electronics.}
+            
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % Publications
+        \section*{{\aiOBP} PUBLICATIONS}
+            
+        \publication{Journal Article}{2021}{Linearized dispersion relations in viscous relativistic hydrodynamics}{Guillermo Perna and Esteban Calzetta}{Physical Review D}{https://doi.org/10.1103/physrevd.104.096005}
+            
+        \vspace*{0.22cm}
+             
+        \publication{Journal Article}{2023}{Quantum measurement and dissipation dynamics}{Guillermo Perna and Esteban Calzetta}{In preparation}{}
+                    
+        \vspace*{0.22cm}
+            
+    \end{minipage}} %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Second Page
+\newpage
+
+\sidebar{sideBarColor!25}
+\newpageheader{titleBackColor}{Guillermo Ezequiel}{Perna}{University teaching assistant \faLightbulbO \hspace{1mm} PhD. student}{white}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SIDEBAR %%%%%%%%%%%%%%%%%%%
+\adjustbox{valign=t}{%
+\begin{minipage}{7.3cm} 
+\vspace*{0.4cm} % text starts 0.4cm under the top the header
+        
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Skill and Strengths 
+    \ruleline{\textbf{Soft Skills and Strengths}}
+    \vspace*{-0.5cm}
+    \begin{center}
+        \cvtag{Creativity}\cvtag{Curiosity}\cvtag{Self Confidence}\cvtag{Ability to Plan and Organize} \cvtag{Autonomy}\cvtag{Adaptability} \cvtag{Eye for Details}\cvtag{Problem Solving}\cvtag{Team Working}\cvtag{Love Learning New Things}\cvtag{Good Communication}\cvtag{Managing Information}\cvtag{Diplomacy}\cvtag{Good Listener}\cvtag{Patience}
+    \end{center}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Professional Skills 
+    \ruleline{\textbf{Professional Skills}}
+    \begin{center}
+        \cvtag{Modeling}\cvtag{Problem simplification and solution approximation}\cvtag{Programming}\cvtag{Deep mathematical background}\cvtag{Latest technologies and infrastructures}
+    \end{center}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Other Interests
+    \ruleline{\textbf{Other Interests}}
+    \small
+    \begin{multicols}{2}
+        \begin{itemize} 
+            \item  Guitar \flag{Guitar.png}
+            \item  Piano \flag{Piano.png}
+            \item Trumpet \flag{Trumpet.png}
+            \item  Chess \flag{Chess.png}
+            \item  Travels \flag{Travels.png}
+            \item  CyberSecurity \flag{lock.png}
+    \end{itemize}
+    \end{multicols}
+
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % QR Code
+        %\ruleline{\textbf{Download My CV}}
+        %\scriptsize
+        %\centering
+        %Download my CV via the QR below \aiOverleaf.
+        %\begin{center}
+        %    \quad
+        %    \qrcode[height=2cm]{
+                %https://www.dropbox.com/sh/k5pheguf9jrur8x/AADpyjYJi7V5bhPyJeP3H74ea?dl=0} \\
+            %\vspace*{0.5cm}
+        %\end{center}
+
+\end{minipage}
+}%
+\hfill
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MAIN %%%%%%%%%%%%%%%%%%%%%%%%%
+\adjustbox{valign=t}{%
+\begin{minipage}{11.3cm}
+    \vspace*{0.4cm}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Peer Reviews
+    %\section*{{\faBook} ACADEMIC PEER REVIEWS}
+    %\footnotesize I did academic peer review for the following journals: 
+    %\begin{itemize}
+    %    \footnotesize
+    %     \item{\textbf{Scientific Piracy}, IF: 4.996 (1720), September 1720;}
+    % \end{itemize}
+        
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Information Technology Skills
+    \section*{{\faDesktop} INFORMATION TECHNOLOGY SKILLS}
+    
+    \ITCcompetence{Data Analysis}{
+    \textbf{Python}: \textit{High-intermediate}\\
+    \textbf{MATLAB}: \textit{Intermediate}\\
+    \textbf{Wolfram Mathematica}: \textit{Intermediate}\\
+    \textbf{Jupiter Notebook}: \textit{Intermediate}\\
+    }
+    
+    \vspace*{0.22cm}
+
+    \ITCcompetence{Modeling and Simulation}{
+    \textbf{Python}: \textit{Intermediate} \\
+    \textbf{AutoCAD} : \textit{Advanced}
+    }
+    
+    \vspace*{0.22cm}
+
+    \ITCcompetence{Version control system}{
+    \textbf{Git and GitHub}: \textit{Intermediate}
+    }
+    
+    \vspace*{0.22cm}
+
+
+    \ITCcompetence{Cyber security}{\textbf{Hack The Box} : \textit{Basic}  \\
+    }
+
+    \vspace*{0.22cm}
+
+    \ITCcompetence{Office Automation}{
+    \textbf{MS Office (Excel, Word, PowerPoint)}: \textit{Intermediate}\\
+    \textbf{\LaTeX}: \textit{Advanced}\\
+    }
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Programming Languages
+    \section*{{\faCode} PROGRAMMING LANGUAGES}
+    \vspace*{-0.5cm}
+    \begin{multicols}{2}    
+    \begin{itemize}
+    \footnotesize
+        \item \textbf{Python}: Intermediate
+        \item \textbf{SQL}: Intermediate
+        \item \textbf{C/C++}: Basic
+        \item \textbf{Haskell}: Basic
+        \item \textbf{MATLAB, Octave}: Basic
+        \item[\vspace{\fill}]
+    \end{itemize}
+    \end{multicols}
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Certificates
+    \section*{{\faCertificate} Extra courses}
+    
+    %\adjustbox{valign=t}{\begin{minipage}{2cm}
+    %\begin{center}
+    %    \includegraphics[width=1.2cm]{IBM.png}
+    %\end{center}
+    %\end{minipage}}
+    %\hfill \vline \hfill
+    \adjustbox{valign=t}{\begin{minipage}{9cm}
+        \begin{itemize}
+            \scriptsize
+            \item Quantum Field Theory. (\textit{Department of Physics, University of Buenos Aires, 2018})
+            \item General Relativity. (\textit{Department of Physics, University of Buenos Aires, 2018})
+            \item Cosmologie. (\textit{Department of Physics, University of Buenos Aires, 2019})
+            \item Advanced Thermodynamics.. (\textit{Department of Physics, University of Buenos Aires, 2020})
+            \item Many Body Physics. (\textit{Department of Physics, University of Buenos Aires, 2017})
+            \item Integer Algebra. (\textit{Department of Mathematics, University of Buenos Aires, 2017})
+            \item Linear Algebra. (\textit{Department of Mathematics, University of Buenos Aires, 2017})
+            \item Advanced Calculus Workshop. (\textit{Department of Mathematics, University of Buenos Aires, 2017})
+            \item Advanced Calculus. (\textit{Department of Mathematics, University of Buenos Aires, 2018})
+            \item Groups, Rings and Modules theory. (\textit{Department of Mathematics, University of Buenos Aires, 2019})
+            \item Probability and Statistics. (\textit{Department of Mathematics, University of Buenos Aires, 2022})
+        \end{itemize}
+    \end{minipage}}
+    
+    \vspace*{0.2cm}
+    
+    %\adjustbox{valign=t}{\begin{minipage}{2cm}
+    %\begin{center}
+    %    \includegraphics[width=2cm]{Matlab.png}
+    %\end{center}
+    %\end{minipage}}
+    %\hfill \vline \hfill
+    %\adjustbox{valign=t}{\begin{minipage}{9cm}
+    %    \begin{itemize}
+    %        \scriptsize 
+    %        \item Pirate Processing with MATLAB %(\textit{Mathworks, 2022})
+    %        \item Signal Processing with MATLAB (\textit{Mathworks, 2022})
+    %        \item Deep Learning with MATLAB (\textit{Mathworks, 2022})
+    %        \item Machine Learning with MATLAB (\textit{Mathworks, 2021})
+    %    \end{itemize}
+    %\end{minipage}}
+    
+%     \vspace*{0.2cm}
+    
+%     \adjustbox{valign=t}{\begin{minipage}{2cm}
+%     \begin{center}
+%         \includegraphics[width=1.2cm]{google.png}
+%     \end{center}
+%     \end{minipage}}
+%     \hfill \vline \hfill
+%     \adjustbox{valign=t}{\begin{minipage}{9cm}
+%         \begin{itemize}
+%             \scriptsize 
+%             \item How to became a Web Pirate (\textit{Google Pirate School, 2022})
+%             \item item 2
+%             \item item 3
+%             \item item 4
+%         \end{itemize}
+%     \end{minipage}}
+    
+%     \vspace*{0.2cm}
+    
+\end{minipage}}
+
+
+\end{document}
